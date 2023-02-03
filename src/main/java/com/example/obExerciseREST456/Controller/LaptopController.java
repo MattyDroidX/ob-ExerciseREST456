@@ -2,6 +2,7 @@ package com.example.obExerciseREST456.Controller;
 
 import com.example.obExerciseREST456.Entities.Laptop;
 import com.example.obExerciseREST456.LaptopRepository;
+import io.swagger.v3.oas.annotations.Hidden;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -54,6 +55,8 @@ public class LaptopController {
         return ResponseEntity.ok(result);
     }
 
+
+    @Hidden
     @DeleteMapping("/api/laptops/{id}")
     public ResponseEntity<Laptop>delete(@PathVariable Long id){
         if(!laptopRepository.existsById(id)){
@@ -64,6 +67,7 @@ public class LaptopController {
         return ResponseEntity.noContent().build();
     }
 
+    @Hidden
     @DeleteMapping("/api/laptops")
     public ResponseEntity<Laptop>deleteAll(){
         log.info("REST request Delete all information of laptops");
