@@ -19,3 +19,6 @@ El acceso se puede realizar desde Postman o Navegador.
     1. Buscar todas las laptops
     2. Buscar una sola laptop
     3. Crear una nueva laptop
+    4. Eliminar una laptop
+    5. Eliminar todas las laptops
+4. Crear test unitarios de los endpoints con JUnit
